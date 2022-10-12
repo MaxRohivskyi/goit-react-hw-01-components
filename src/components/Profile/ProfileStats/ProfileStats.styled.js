@@ -12,18 +12,19 @@ width: 100px;
 
 text-align: center;
 
-background-color: #f3f6f9;
-border: 1px solid #e4e9f0;
+background-color: ${p => p.theme.colors.accent};
+border: ${p => p.theme.borders.normal} ${p => p.theme.colors.muted};
 `;
 
 export const StatsItemLabel = styled.span`
 display: block;
 margin-bottom: 10px;
 
-color: #768696;
-font-size: 12px;
+color: ${p => p.theme.colors.primary};
+font-size: ${p => p.theme.fontSizes.xs};
 `;
 
 export const StatsItemValue = styled.span`
-font-weight: 700;
+color: ${p => p.theme.colors.secondary};
+font-weight: ${p => p.theme.fontWeights.bold};
 `;

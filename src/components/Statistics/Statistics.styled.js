@@ -4,14 +4,15 @@ export const StatisticsWrapper = styled.div`
 margin: 0 auto 30px;
 width: 400px;
 
-background-color: #ffffff;
-border-radius: 5px;
-box-shadow: 2px 2px 5px #10263b;
+background-color: ${p => p.theme.colors.white};
+border-radius: ${p => p.theme.radii.normal};
+box-shadow: 2px 2px 5px ${p => p.theme.colors.secondary};
 `;
 
 export const Title = styled.h2`
-color: black;
-font-size: 16px;
+color: ${p => p.theme.colors.secondary};
+font-weight: ${p => p.theme.fontWeights.bold};
+font-size: ${p => p.theme.fontSizes.m};
 text-transform: uppercase;
 text-align: center;
 padding: 20px 0;
@@ -25,12 +26,14 @@ export const StatsItem = styled.li`
 padding: 10px 0;
 width: 100%;
 
-color: white;
+color: ${p => p.theme.colors.white};
+font-weight: ${p => p.theme.fontWeights.bold};
+font-size: ${p => p.theme.fontSizes.m};
 text-align: center;
 
 :first-child {
   background-color: #${Math.floor(Math.random() * 16777215).toString(16)};
-  border-radius: 0 0 0 5px;
+  border-radius: 0 0 0 ${p => p.theme.radii.normal};
 };
 
 :nth-child(2) {
@@ -45,7 +48,7 @@ text-align: center;
 }
 :last-child {
   background-color: #${Math.floor(Math.random() * 16777215).toString(16)};
-  border-radius: 0 0 5px 0;
+  border-radius: 0 0 ${p => p.theme.radii.normal} 0;
 }
 `;
 

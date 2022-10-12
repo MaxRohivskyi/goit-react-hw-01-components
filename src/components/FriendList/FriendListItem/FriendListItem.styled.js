@@ -6,10 +6,10 @@ align-items: center;
 margin-bottom: 15px;
 padding: 5px;
 
-background-color: #ffffff;
-border: 1px solid #10263b;
-box-shadow: 2px 2px 5px #10263b;
-border-radius: 5px;
+background-color: ${p => p.theme.colors.white};
+border: ${p => p.theme.borders.normal} ${p => p.theme.colors.muted};
+box-shadow: 2px 2px 5px ${p => p.theme.colors.secondary};
+border-radius: ${p => p.theme.radii.normal};
 
 :last-child {
   margin-bottom: 0;
@@ -34,6 +34,7 @@ width: 48px;
 export const FriendItemName = styled.p`
 margin-left: 5px;
 
-font-size: 16px;
-font-weight: 700;
+color: ${p => p.theme.colors.secondary};
+font-weight: ${p => p.theme.fontWeights.bold};
+font-size: ${p => p.theme.fontSizes.m};
 `;

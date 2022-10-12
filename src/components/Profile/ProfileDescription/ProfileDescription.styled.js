@@ -9,16 +9,19 @@ text-align: center;
 `;
 
 export const Avatar = styled.img`
-height: 100px;
-border-radius: 50%;
+height: 100%;
+border-radius: ${p => p.theme.radii.round};
+border: ${p => p.theme.borders.normal} ${p => p.theme.colors.muted};
 `;
 
 export const UserName = styled.p`
-color: #122236;
-font-size: 16px;
-font-weight: 700;
+margin: 10px 0px;
+
+color: ${p => p.theme.colors.secondary};
+font-weight: ${p => p.theme.fontWeights.bold};
+font-size: ${p => p.theme.fontSizes.m};
 `;
 
 export const Text = styled.p`
-color: #82909e;
+color: ${p => p.theme.colors.secondary};
 `;

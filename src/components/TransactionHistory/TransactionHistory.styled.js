@@ -6,35 +6,34 @@ margin: 0 auto;
 
 text-align: center;
 
-background-color: #ffffff; 
-border-radius: 5px;
-box-shadow: 2px 2px 5px #10263b;
+background-color: ${p => p.theme.colors.white};
+border-radius: ${p => p.theme.radii.normal};
+box-shadow: 2px 2px 5px ${p => p.theme.colors.secondary};
 border-collapse: separate;
 border-spacing: 0;
 overflow: hidden;
 `;
 
 export const TransactionHistoryThead = styled.thead`
-background-color: #00bcd5;
-color: white;
+background-color: ${p => p.theme.colors.primary};
+color: ${p => p.theme.colors.white};
 `;
 
 export const TransactionHistoryBox = styled.th`
 padding-top: 10px;
 padding-bottom: 10px;
-border-right: 1px solid #e4e4e4;
+
+border-right: ${p => p.theme.borders.normal} ${p => p.theme.colors.muted};;
 
 :last-child {
   border-right: 0;
 }
-
-/* :nth-child(2n) {
-  background-color: #ecf1f4;
-} */
 `;
 
 export const TransactionHistoryRow = styled.tr`
 :nth-child(2n) {
-  background-color: #ecf1f4;
+  color: ${p => p.theme.colors.text};
+  
+  background-color: ${p => p.theme.colors.background};
 }
 `;
